@@ -1,0 +1,93 @@
+# Modules Overview
+
+**HRDK × SamsungSkills Invitational Friendly Challenge 2026**
+
+**06/20/2026 – 06/26/2026 | GIFTS (Global Institute for Transferring Skills HRDK), Incheon, Republic of Korea**
+
+This round has **six** separate tasks. Together they cover speed exercises, backend and frontend development, a client application, design implementation, and an AI project. See the linked module briefs for full requirements.
+
+**Schedule (excerpt)**
+
+| Day            | Module | Focus                                          |
+| -------------- | ------ | ---------------------------------------------- |
+| Mon 06/22 (C1) | **A**  | Speed test (HTML, CSS, JavaScript, TypeScript) |
+| Tue 06/23 (C2) | **B**  | Backend                                        |
+| Tue 06/23 (C2) | **C**  | Frontend                                       |
+| Wed 06/24 (C3) | **D**  | Client App                                     |
+| Wed 06/24 (C3) | **E**  | Design implementation                          |
+| Wed 06/24 (C3) | **F**  | AI Project (1h)                                |
+
+Full timings (briefings, lunch, marking) are in the [README](README.md).
+
+---
+
+## Task descriptions (detail)
+
+- [Module A - Speed Test](module-a.md)
+- [Module B - Backend](module-b.md)
+- [Module C - Frontend](module-c.md)
+- [Module D - Client App](module-d.md)
+- [Module E - Design implementation](module-e.md)
+- [Module F - AI Project](module-f.md)
+
+## Technical Environment
+
+You can solve the tasks by developing them on your own machine.
+
+### Gitea, git
+
+For **all six** tasks, you can start from a selected template repo on Gitea.
+
+The available template repos:
+
+- react-app
+- react-ts-app
+- vue-app
+- vue-ts-app
+- node-app
+- node-ts-app
+- laravel-app
+- vanilla-js-app
+- angular-app
+
+The Gitea service is available at the following address: [https://git.sfc.skillsit.eu](https://gitea.sfc.skillsit.eu)
+
+To log in, you must use the username and password (a 4-digit PIN code) you have been given.
+After logging in, create a new repo for the next task.
+
+- In the Owner field, select `competitors` team! **Make sure you set this option carefully because if you set your own user as the owner, the automatic deployment will not work!**
+- Give the name of the new repo using the following pattern: `module-X-Y`, where `X` is the module letter, and `Y` is your workstation number. **Make sure you set the repo's name carefully because if you make a mistake, the automatic deployment will not work!** _(Example: module-a-1)_
+- Under the template field, select the appropriate template (e.g. `react-ts-app`). Select `Git Content (Default Branch)` for `Template Items`.
+
+Once the new repo is created, clone it to your own workstation inside the `c:\sfc2026-s17` folder.
+
+### Using npm modules
+
+The npm modules will be accessible via a local npm cache. This means that even though there will be no internet access to the machines, you will be able to add the available npm modules to the projects as usual, and the `npm install` command issued on the cloned template projects will install all the npm modules needed for your project.
+
+The available npm modules:
+
+- express
+- mysql2
+- vue-router
+- react-router, react-router-dom
+- axios
+- sass
+- tailwindcss
+- prisma, @prisma/client
+- express-validator
+- zod
+- bootstrap
+- _and all the types (`@types/`) needed for the TS projects_
+
+### Laravel projects, composer install
+
+The Laravel project contains all the necessary files, so you will not need to `composer install`. Your workstation has PHP 8 installed, so you can use the `php artisan` commands in the Laravel project.
+
+### Deployment
+
+When you commit and push your work, the deployment will start automatically. You can follow the process in the Gitea interface under the Action tab. Once the deployment is complete, your project will be available at `https://module-X-YYYY.sfc.skillsit.eu`, where `X` is the module letter and `YYYY` is your 4-digit PIN.
+
+### Database access
+
+You will have your own database on the MySQL database server (`db.sfc.skillsit.eu`) available on the local network. You will need to use this database for development, and the same database will provide the data for your projects deployed to the server. A database dump will be provided to get the initial data. During the marking, the database will be restored to its original state using the same dump. Your backend solution (Module B) uses this database.
